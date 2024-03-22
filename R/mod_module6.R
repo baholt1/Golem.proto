@@ -29,13 +29,13 @@ mod_module6_server <- function(id, r){
 
     r$options <- input$options
 
-    if (input$options == "1") {r$plot1 <- "bar"}
+    if (input$options == "1") {r$plot1 <- "raster"}
     if (input$options == "1") {r$num <- 100}
     if (input$options == "1") {r$type <- "character"}
-    if (input$options == "2") {r$plot1 <- "line"}
+    if (input$options == "2") {r$plot1 <- "ribbon"}
     if (input$options == "2") {r$num <- 200}
     if (input$options == "2") {r$type <- "numeric"}
-    if (input$options == "3") {r$plot1 <- "point"}
+    if (input$options == "3") {r$plot1 <- "tile"}
     if (input$options == "3") {r$num <- 300}
     if (input$options == "3") {r$type <- "integer"}
     if (input$options == "4") {r$plot1 <- "violin"}

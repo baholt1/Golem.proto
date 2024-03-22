@@ -10,6 +10,14 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # Your application UI logic
     fluidPage(
+      theme = bslib::bs_theme(version = 5,
+                              bg = "#333333",
+                              fg = "White",
+                              primary = "Green",
+                              heading_font = bslib::font_google("Prompt"),
+                              base_font = bslib::font_google("Prompt"),
+                              code_font = bslib::font_google("JetBrains Mono"),
+                              "progress-bar-bg" = "lime"),
       shiny::titlePanel("Random App"),
       mod_module6_ui("module6_1"),
       # mod_module7_ui("module7_1"),
