@@ -19,11 +19,11 @@ mod_module1_ui <- function(id){
 #' @importFrom shinipsum random_ggplot
 #' @importFrom shiny renderPlot
 #' @noRd
-mod_module1_server <- function(id){
+mod_module1_server <- function(id, r){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
  output$plot <- renderPlot({
-   shinipsum::random_ggplot()
+   shinipsum::random_ggplot(r$plot1)
  })
   })
 }
