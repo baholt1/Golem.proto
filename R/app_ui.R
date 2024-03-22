@@ -12,12 +12,12 @@ app_ui <- function(request) {
     # Your application UI logic
     fluidPage(
       theme = bslib::bs_theme(version = 5,
-                              bg = "#333333",
-                              fg = "White",
-                              primary = "Green",
-                              heading_font = bslib::font_google("Prompt"),
-                              base_font = bslib::font_google("Prompt"),
-                              code_font = bslib::font_google("JetBrains Mono"),
+                              bg = "white",
+                              fg = "black",
+                              primary = "green",
+                              heading_font = bslib::font_google("Fira Sans"),
+                              base_font = bslib::font_google("Fira Sans"),
+                              code_font = bslib::font_google("Fredoka One"),
                               "progress-bar-bg" = "lime"),
       shiny::titlePanel("Random App"),
       mod_module6_ui("module6_1"),

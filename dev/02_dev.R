@@ -20,8 +20,8 @@ attachment::att_amend_desc()
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "module1", with_test = TRUE) # Name of the module
-golem::add_module(name = "module2", with_test = TRUE) # Name of the module
+golem::add_module(name = "module1", with_test = TRUE)
+golem::add_module(name = "module2", with_test = TRUE)
 golem::add_module(name = "module3", with_test = TRUE)
 golem::add_module(name = "module4", with_test = TRUE)
 golem::add_module(name = "module5", with_test = TRUE)
@@ -38,7 +38,7 @@ golem::add_utils("helpers", with_test = TRUE)
 ## Creates .js and .css files at inst/app/www
 # golem::add_js_file("script")
 # golem::add_js_handler("handlers")
-# golem::add_css_file("custom")
+golem::add_css_file("styles")
 # golem::add_sass_file("custom")
 
 ## Add internal datasets ----
