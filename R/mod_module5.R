@@ -21,20 +21,20 @@ mod_module5_ui <- function(id){
 #' @importFrom shinipsum random_ggplot
 #' @importFrom shiny renderPlot
 #' @noRd
-mod_module5_server <- function(id){
+mod_module5_server <- function(id, r){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
     output$one <- renderPlot({
-      random_ggplot()
+      random_ggplot(r$plot1)
     })
 
     output$two <- renderPlot({
-      random_ggplot()
+      random_ggplot(r$plot1)
     })
 
     output$three <- renderPlot({
-      random_ggplot()
+      random_ggplot(r$plot1)
     })
   })
 }

@@ -26,6 +26,8 @@ golem::add_module(name = "module3", with_test = TRUE)
 golem::add_module(name = "module4", with_test = TRUE)
 golem::add_module(name = "module5", with_test = TRUE)
 golem::add_module(name = "module6", with_test = TRUE)
+golem::add_module(name = "module7", with_test = TRUE)
+golem::add_module(name = "module8", with_test = TRUE)
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*

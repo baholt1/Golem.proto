@@ -20,12 +20,12 @@ mod_module3_ui <- function(id){
 #' @importFrom shinipsum random_DT
 #' @importFrom DT renderDT
 #' @noRd
-mod_module3_server <- function(id){
+mod_module3_server <- function(id, r){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
     output$dt <- DT::renderDT({
-      shinipsum::random_DT(10,5)
+      shinipsum::random_DT(r$num, 5)
     })
   })
 }

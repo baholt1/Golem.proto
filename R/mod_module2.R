@@ -19,12 +19,15 @@ mod_module2_ui <- function(id){
 #' @importFrom shinipsum random_text
 #' @importFrom shiny renderText
 #' @noRd
-mod_module2_server <- function(id){
+mod_module2_server <- function(id, r){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
+
  output$text <- shiny::renderText({
-   shinipsum::random_text(nwords = 200)
+   shinipsum::random_text(nwords = r$num)
  })
+
+
   })
 }
 

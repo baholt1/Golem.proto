@@ -12,6 +12,7 @@ app_ui <- function(request) {
     fluidPage(
       shiny::titlePanel("Random App"),
       mod_module6_ui("module6_1"),
+      # mod_module7_ui("module7_1"),
       shiny::tabsetPanel(
       shiny::tabPanel("Random 1", mod_module1_ui("module1_1")),
       shiny::tabPanel("Random 2", mod_module2_ui("module2_1")),

@@ -6,7 +6,7 @@
 #'
 #' @noRd
 #'
-#' @importFrom shiny NS tagList
+#' @importFrom shiny NS tagList radioButtons
 mod_module6_ui <- function(id){
   ns <- NS(id)
   opts <- c("1", "2", "3", "4")
@@ -21,6 +21,7 @@ shiny::radioButtons(ns("options"),
 
 #' module6 Server Functions
 #'
+#' @importFrom shiny observeEvent
 #' @noRd
 mod_module6_server <- function(id, r){
   moduleServer( id, function(input, output, session){
@@ -29,9 +30,17 @@ mod_module6_server <- function(id, r){
     r$options <- input$options
 
     if (input$options == "1") {r$plot1 <- "bar"}
+    if (input$options == "1") {r$num <- 100}
+    if (input$options == "1") {r$type <- "character"}
     if (input$options == "2") {r$plot1 <- "line"}
+    if (input$options == "2") {r$num <- 200}
+    if (input$options == "2") {r$type <- "numeric"}
     if (input$options == "3") {r$plot1 <- "point"}
+    if (input$options == "3") {r$num <- 300}
+    if (input$options == "3") {r$type <- "integer"}
     if (input$options == "4") {r$plot1 <- "violin"}
+    if (input$options == "4") {r$num <- 400}
+    if (input$options == "4") {r$type <- "model"}
 
     })
 

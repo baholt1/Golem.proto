@@ -19,12 +19,12 @@ mod_module4_ui <- function(id){
 #' @importFrom shinipsum random_print
 #' @importFrom shiny renderPrint
 #' @noRd
-mod_module4_server <- function(id){
+mod_module4_server <- function(id, r){
   moduleServer( id, function(input, output, session){
     ns <- session$ns
 
     output$out <- shiny::renderPrint({
-      shinipsum::random_print("model")
+      shinipsum::random_print(r$type)
     })
   })
 }
